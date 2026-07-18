@@ -1,0 +1,102 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#waybar {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin: 8px 12px;
+    color: rgba(255, 255, 255, 0.5);;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);;
+}
+
+#workspaces button.active {
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 0 12px;
+    margin: 4px 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#battery.charging, #battery.plugged {
+    color: #9ece6a;
+}
+
+#battery.critical:not(.charging) {
+    color: #f7768e;
+}
+
+#network.disconnected {
+    color: #f7768e;
+}
+
+#pulseaudio.muted {
+    color: #565f89;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#custom-brightness {
+    padding: 0 10px;
+    color: #e0af68; /* Matches the Tokyo Night yellow tone */
+}
+
+#custom-brightness:hover {
+    color: #ff9e64;
+}
+#network {
+    color: #9ece6a; /* Green for network */
+    padding: 0 10px;
+}
+
+#power-profiles-daemon {
+    color: #7dcfff; /* Blue for power mode */
+    padding: 0 10px;
+}
+
+#network.disconnected {
+    color: #f7768e;
+}

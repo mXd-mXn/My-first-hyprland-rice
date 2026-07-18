@@ -1,0 +1,52 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "pulseaudio", "custom/brightness", "battery"],
+
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+    "clock": {
+        "format": "{:%H:%M}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": ["", "", ""]
+    },
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": "󰈀 Wired",
+        "format-disconnected": "󰖪 Disconnected",
+        "tooltip-format": "{ipaddr} via {gwaddr}"
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "performance": "󰓅",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "custom/brightness": {
+        "format": "󰃠",
+        "on-click": "~/.config/waybar/brightness_menu.sh",
+        "tooltip": false
+    }
+}
+#custom-brightness {
+    padding: 0 10px;
+    color: #e0af68;
+    cursor: pointer;
+}
+
+#custom-brightness:hover {
+    color: #ff9e64;
+}

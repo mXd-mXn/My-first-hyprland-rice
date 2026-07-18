@@ -1,0 +1,109 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    },
+  "display": {
+    "brightColor": "true",
+    "separator": "",
+    "constants": [
+      "\u001b[77C",  // $1: Move cursor forward 77 columns (adjust if needed)
+      "\u001b[77D",  // $2: Move cursor back 77 columns (not used, defined anyway)
+      "\u001b[88C",  // $3: Move cursor to max width (wide term), or last column (narrow term)
+      "\u001b[20D",  // $4: Move back 20 columns for the color block (both lines)
+      "───────────────────────────────────────────────────────────────────────────────────────"
+    ],
+    "key": {
+      "width": 14
+    },
+  },
+  "modules": [
+  "break",
+    {
+      "type": "custom",
+      "format": "╭─{$5}─╮",
+      "keyColor": "0;0;255;0;0",
+    },
+    {
+      "type": "os",
+      "key": "│        OS:{$1} │",
+      "keyColor": "0;0;255;0;0"
+    },
+    {
+      "type": "host",
+      "key": "│      Host:{$1} │",
+      "keyColor": "0;0;255;0;0"
+    },
+    {
+      "type": "kernel",
+      "key": "│    Kernel:{$1} │",
+      "keyColor": "0;0;255;0;0"
+    },
+    {
+      "type": "uptime",
+      "key": "│    Uptime:{$1} │",
+      "keyColor": "0;0;255;0;0"
+    },
+    {
+      "type": "shell",
+      "key": "│     Shell:{$1} │",
+      "keyColor": "0;0;255;0;0"
+    },
+    {
+      "type": "terminal",
+      "key": "│  Terminal:{$1} │",
+      "keyColor": "0;0;255;0;0"
+    },
+    {
+      "type": "de",
+      "key": "│        DE:{$1} │",
+      "keyColor": "0;0;255;0;0"
+    },
+    {
+      "type": "wm",
+      "key": "│        WM:{$1} │",
+      "keyColor": "0;0;255;0;0"
+    },
+    {
+      "type": "theme",
+      "key": "│     Theme:{$1} │",
+      "keyColor": "0;0;255;0;0"
+    },   
+    {
+      "type": "icons",
+      "key": "│     Icons:{$1} │",
+      "keyColor": "0;0;255;0;0",
+      //"format": "{2:-47}"
+    },
+    {
+      "type": "cpu",
+      "key": "│       CPU:{$1} │",
+      "keyColor": "0;0;255;0;0",
+    },
+    {
+      "type": "gpu",
+      "key": "│       GPU:{$1} │",
+      "keyColor": "0;0;255;0;0",
+    },
+    {
+      "type": "memory",
+      "key": "│    Memory:{$1} │",
+      "keyColor": "0;0;255;0;0",
+    },
+    {
+      "type": "swap",
+      "key": "│      Swap:{$1} │",
+      "keyColor": "0;0;255;0;0",
+    },
+    {
+      "type": "disk",
+      "key": "│      Disk:{$1} │",
+      "keyColor": "0;0;255;0;0",
+    },
+    {
+      "type": "custom",
+      "format": "╰─{$5}─╯",
+      "outputColor": "0;0;255;0;0"
+    }
+
+  ]
+}
