@@ -6,11 +6,11 @@
     "brightColor": "true",
     "separator": "",
     "constants": [
-      "\u001b[77C",  // $1: Move cursor forward 77 columns (adjust if needed)
+      "\u001b[57C",  // $1: Move cursor forward 77 columns (adjust if needed)
       "\u001b[77D",  // $2: Move cursor back 77 columns (not used, defined anyway)
       "\u001b[88C",  // $3: Move cursor to max width (wide term), or last column (narrow term)
       "\u001b[20D",  // $4: Move back 20 columns for the color block (both lines)
-      "───────────────────────────────────────────────────────────────────────────────────────"
+      "───────────────────────────────────────────────────────────────────"
     ],
     "key": {
       "width": 14
